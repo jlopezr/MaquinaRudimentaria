@@ -16,7 +16,7 @@ package PaqueteMRFuncional is
 	
 	constant cNumInst: natural;
 	constant cNumDatos: natural;
-	constant cNumeroRegistros: natural;
+	constant cNumRegistros: natural;
 	
 	function "AND" (A,B: integer) return integer;
 		
@@ -24,18 +24,18 @@ end package PaqueteMRFuncional;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.STD_LOGIC_ARITH.all;
 
 package body PaqueteMRFuncional is
 	
 	constant cNumInst		: natural := 10;
 	constant cNumDatos		: natural := 200;
 	constant cNumRegistros	: natural := 8;
-	constant cMaxBits		: natural := 128;
+	constant cMaxNumBits	: natural := 128;
 	
 	function "AND" (A,B: integer) return integer is
 		variable ABV: signed(0 to cMaxNumBits-1);
 		variable BBV: signed(0 to cMaxNumBits-1);
+		variable Result: integer;
 	begin
 		ABV := Conv_signed(A, cMaxNumBits);
 		BBV := Conv_signed(B, cMaxNumBits);

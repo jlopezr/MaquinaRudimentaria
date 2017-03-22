@@ -17,7 +17,7 @@ begin
 		variable CP				: integer;
 		variable RI				: tInstruccion;
 		variable Programa		: tVectorInst(0 to cNumInst);
-		variable MemDatos		: tVectorInst(0 to cNumInst);
+		variable MemDatos		: tVectorDatos(0 to cNumInst);
 		variable N				: boolean;
 		variable C				: boolean;
 		variable Registros		: tVectorDatos(0 to cNumRegistros);
